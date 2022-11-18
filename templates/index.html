@@ -1,0 +1,109 @@
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <title>Weather app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+</head>
+
+<body style="background-color:bisque;"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+<div style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;text-align: center;font-size: 100px;"><b>Weather App</b></div>
+
+
+<!-- <div >
+    <figure class="image is-75x75">
+        <img src="http://openweathermap.org/img/w/{{ weather1.icon }}.png" alt="Image">
+    </figure>
+</div>
+<div >
+    <div>
+        <p>
+            <span class="title">{{ weather1.city1 }}</span>
+            <br>
+            <span class="subtitle">{{ weather1.temperature }}° F</span>
+             <br> {{ weather1.max_temp}}
+            <br> 
+        </p>
+    </div>  -->
+
+    
+
+
+    
+    
+    
+    
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col align-self-start">
+            <div class="card" style="width:15em;background-color: black;">
+                <img src="http://openweathermap.org/img/w/{{ weather1.icon }}.png" class="card-img-top" alt="Image">
+                <div class="card-body" style="color: white;">
+                  <h5 class="card-title">{{ weather1.city1 }}</h5>
+                  <h2 class="card-text">{{ weather1.temperature }}° F</h2>
+                  <p><b>Max:  </b>{{ weather1.max_temp}}</p>
+                  <p><b>Min:  </b>{{ weather1.max_min}}</p>
+                  <h6><b>Humidity:  </b>{{weather1.humidity}}</h6>
+                  <p><b>{{ weather1.description }}</b></p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+          </div>
+          <div class="col align-self-center">
+            <div class="card" style="width:15em;background-color: black;">
+                <img src="http://openweathermap.org/img/w/{{ weather2.icon }}.png" class="card-img-top" alt="Image">
+                <div class="card-body" style="color: white;">
+                  <h5 class="card-title">{{ weather2.city2 }}</h5>
+                  <h2 class="card-text">{{ weather2.temperature }}° F</h2>
+                  <p><b>Max:  </b>{{ weather2.max_temp}}</p>
+                  <p><b>Min:  </b>{{ weather2.max_min}}</p>
+                  <h6><b>Humidity:  </b>{{weather2.humidity}}</h6>
+                  <p><b>{{ weather2.description }}</b></p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+          </div>
+          <div class="col align-self-end">
+            <div class="card" style="width:15em;background-color: black;">
+                <img src="http://openweathermap.org/img/w/{{ weather3.icon }}.png" class="card-img-top" alt="Image">
+                <div class="card-body" style="color: white;">
+                  <h5 class="card-title">{{ weather3.city3 }}</h5>
+                  <h2 class="card-text">{{ weather3.temperature }}° F</h2>
+                  <p><b>Max:  </b>{{ weather3.max_temp}}</p>
+                  <p><b>Min:  </b>{{ weather3.max_min}}</p>
+                  <h6><b>Humidity:  </b>{{weather3.humidity}}</h6>
+                  <p><b>{{ weather3.description }}</b></p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <hr>
+
+      <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color:bisque;">
+          © 2022 Copyright:
+          <a class="text-dark" href="#">OpenWeatherMap</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+</body>
+
+</html>
